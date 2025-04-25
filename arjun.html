@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Gaikwad - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #D8BFD8, #E6E6FA);
+            color: #4B0082;
+            text-align: center;
+        }
+
+        header {
+            background: rgba(75, 0, 130, 0.8);
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .tab-button {
+            background: rgba(75, 0, 130, 0.7);
+            border: none;
+            padding: 12px 18px;
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tab-button:hover {
+            background: rgba(75, 0, 130, 0.9);
+            transform: scale(1.1);
+        }
+
+        .tab-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(75, 0, 130, 0.3);
+            color: #4B0082;
+        }
+
+        .active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(75, 0, 130, 0.3);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(75, 0, 130, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background: rgba(75, 0, 130, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        a {
+            color: #4B0082;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Arjun Gaikwad | Aspiring Electronics Engineer  
+    </header>
+
+    <div class="tab-container">
+        <button class="tab-button" onclick="openTab('about')">About Me</button>
+        <button class="tab-button" onclick="openTab('education')">Academic Details</button>
+        <button class="tab-button" onclick="openTab('skills')">Skills</button>
+        <button class="tab-button" onclick="openTab('projects')">Projects</button>
+        <button class="tab-button" onclick="openTab('certificates')">Certificates</button>
+        <button class="tab-button" onclick="openTab('extracurricular')">Extracurricular Activities</button>
+        <button class="tab-button" onclick="openTab('contact')">Contact</button>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="tab-content active">
+        <h2>Welcome to My Portfolio! </h2>
+        <div class="card">
+            <img src="https://drive.google.com/file/d/1JAc-NA1WqNMtcSX66_7XMZpVKTCCB1m9/view?usp=drive_link" alt="Arjun Gaikwad" class="profile-pic">
+            <p>I am Arjun Gaikwad, a passionate Electronics Engineering student at MIT Academy of Engineering.  
+               I love problem-solving, coding, and Cricket.  
+               Feel free to explore my journey below!</p>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div id="education" class="tab-content">
+        <h2>Academic Details</h2>
+        <div class="card">
+            <ul>
+                <li><strong>SSC (10th Grade)</strong>: 73% (2022)</li>
+                <li><strong>HSC (12th Grade)</strong>: 73% (2024)</li>
+                <li><strong>CET Score</strong>: 40 Percentile</li>
+                <li><strong>Current</strong>: B.Tech in Electronics and Telecommunication, MIT Academy of Engineering</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="tab-content">
+        <h2>Skills</h2>
+        <div class="card">
+            <ul>
+                <li>Programming: C, Python</li>
+                <li>Soft Skills: Communication, Teamwork</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="tab-content">
+        <h2>Projects</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Temperature Based Fan Controller</strong> – Automatically adjusts fan speed based on ambient temperature.</li>
+                <li><strong>LED Blinker Circuit</strong> – Built using 555 Timer IC and breadboard.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Certificates -->
+    <div id="certificates" class="tab-content">
+        <h2>Certificates</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Cisco Certificate</strong> – Basics of computer networks and Python</li>
+                <li><strong>Interdojo Tournament</strong> – Karate Tournament</li>
+                <li><strong>NASSCOM Certificate</strong> – Emerging tech, digital fluency, foundational IT skills</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Extracurricular -->
+    <div id="extracurricular" class="tab-content">
+        <h2>Extracurricular Activities</h2>
+        <div class="card">
+            <ul>
+                <li>Cricket team player at college-level tournaments</li>
+                <li>Running</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="tab-content">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email (College): <a href="mailto:2024010070211@mitaoe.ac.in">2024010070211@mitaoe.ac.in</a></p>
+            <p>Email (Personal): <a href="mailto:arjun0901gaikwad@gmail.com">arjun0901gaikwad@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918999187768">+91 8999187768</a></p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Arjun Gaikwad | Built with HTML, CSS & JavaScript  
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+            var selectedTab = document.getElementById(tabName);
+            selectedTab.style.display = "block";
+            selectedTab.classList.add("active");
+        }
+
+        // Initial load
+        openTab('about');
+    </script>
+
+</body>
+</html>
